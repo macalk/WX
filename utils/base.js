@@ -39,7 +39,9 @@ class Base{
               that._refetch(params);
             }
           }
-          params.eCallback && params.eCallback(res.data);
+          if (noRefetch) {
+            params.eCallback && params.eCallback(res.data);
+          }
         }
         
       },

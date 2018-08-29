@@ -30,6 +30,11 @@ Page({
       account: options.account,
       orderStatus:0
     })
+
+    //显示收货地址
+    address.getAddress((res)=>{
+      this._bindAddressInfo(res);
+    })
   },
 
   //编辑地址
