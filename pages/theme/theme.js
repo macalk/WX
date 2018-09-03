@@ -34,6 +34,14 @@ Page({
     wx.setNavigationBarTitle({
       title: this.data.name
     });
+  },
+
+
+  onProductsItemTap:function(event){
+    var id = event.currentTarget.dataset.id;
+    wx.navigateTo({
+      url: '../product/product?id=' + id,
+    })
   }
 
   
